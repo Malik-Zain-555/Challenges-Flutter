@@ -1,9 +1,5 @@
-import 'package:animation_flutter/Screens/get_started.dart';
 import 'package:animation_flutter/Widgets/quicklink.dart';
-import 'package:animation_flutter/main.dart';
 import 'package:flutter/material.dart';
-// At the top of your dashboard.dart file
-import 'package:flutter/material.dart'; // Or your other imports
 
 
 class Dashboard extends StatefulWidget {
@@ -108,7 +104,207 @@ class _DashboardState extends State<Dashboard> {
                 Text("See All", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20, color: Colors.grey,))
               ],
             ),
-          )
+          ),
+           Expanded(
+             child: GridView.count(
+               crossAxisCount: 2,
+               crossAxisSpacing: 10,
+               mainAxisSpacing: 10,
+               childAspectRatio: 0.75, // controls shape of each card
+               shrinkWrap: true,
+               children: [
+                 Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrangeAccent,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                     child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.center,
+                       children: [
+                         Expanded(
+                           child: ClipRRect(
+                             borderRadius: BorderRadius.circular(15),
+                             child: Image.asset(
+                               "assets/burger.jpg",
+                               fit: BoxFit.cover,
+                               width: double.infinity,
+                             ),
+                           ),
+                         ),
+                         const SizedBox(height: 10),
+                         Text(
+                           "Burger",
+                           style: TextStyle(
+                             color: Colors.white,
+                             fontWeight: FontWeight.bold,
+                             fontSize: 22,
+                           ),
+                         ),
+                         const Text(
+                           "350 Rs",
+                           style: TextStyle(
+                             color: Colors.white70,
+                             fontWeight: FontWeight.w500,
+                           ),
+                         ),
+                       ],
+                     ),
+                ),
+                 Container(
+                   padding: EdgeInsets.all(20),
+                   decoration: BoxDecoration(
+                     color: Colors.yellow[900],
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     children: [
+                       Expanded(
+                         child: ClipRRect(
+                           borderRadius: BorderRadius.circular(15),
+                           child: Image.asset(
+                             "assets/fries.jpg",
+                             fit: BoxFit.cover,
+                             width: double.infinity,
+                           ),
+                         ),
+                       ),
+                       const SizedBox(height: 10),
+                       Text(
+                         "Fries",
+                         style: TextStyle(
+                           color: Colors.white,
+                           fontWeight: FontWeight.bold,
+                           fontSize: 22,
+                         ),
+                       ),
+                       const Text(
+                         "200 Rs",
+                         style: TextStyle(
+                           color: Colors.white70,
+                           fontWeight: FontWeight.w500,
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+                 Container(
+                   padding: EdgeInsets.all(20),
+                   decoration: BoxDecoration(
+                     color: Colors.lime[700],
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     children: [
+                       Expanded(
+                         child: ClipRRect(
+                           borderRadius: BorderRadius.circular(15),
+                           child: Image.asset(
+                             "assets/pizza.jpg",
+                             fit: BoxFit.cover,
+                             width: double.infinity,
+                           ),
+                         ),
+                       ),
+                       const SizedBox(height: 10),
+                       Text(
+                         "Pizza",
+                         style: TextStyle(
+                           color: Colors.white,
+                           fontWeight: FontWeight.bold,
+                           fontSize: 22,
+                         ),
+                       ),
+                       const Text(
+                         "880 Rs",
+                         style: TextStyle(
+                           color: Colors.white70,
+                           fontWeight: FontWeight.w500,
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+                 Container(
+                   padding: EdgeInsets.all(20),
+                   decoration: BoxDecoration(
+                     color: Colors.teal[700],
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     children: [
+                       Expanded(
+                         child: ClipRRect(
+                           borderRadius: BorderRadius.circular(15),
+                           child: Image.asset(
+                             "assets/ramen.jpg",
+                             fit: BoxFit.cover,
+                             width: double.infinity,
+                           ),
+                         ),
+                       ),
+                       const SizedBox(height: 10),
+                       Text(
+                         "Ramen",
+                         style: TextStyle(
+                           color: Colors.white,
+                           fontWeight: FontWeight.bold,
+                           fontSize: 22,
+                         ),
+                       ),
+                       const Text(
+                         "680 Rs",
+                         style: TextStyle(
+                           color: Colors.white70,
+                           fontWeight: FontWeight.w500,
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+                 Container(
+                   padding: EdgeInsets.all(20),
+                   decoration: BoxDecoration(
+                     color: Colors.green[800],
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     children: [
+                       Expanded(
+                         child: ClipRRect(
+                           borderRadius: BorderRadius.circular(15),
+                           child: Image.asset(
+                             "assets/pasta.jpg",
+                             fit: BoxFit.cover,
+                             width: double.infinity,
+                           ),
+                         ),
+                       ),
+                       const SizedBox(height: 10),
+                       Text(
+                         "Pasta",
+                         style: TextStyle(
+                           color: Colors.white,
+                           fontWeight: FontWeight.bold,
+                           fontSize: 22,
+                         ),
+                       ),
+                       const Text(
+                         "500 Rs",
+                         style: TextStyle(
+                           color: Colors.white70,
+                           fontWeight: FontWeight.w500,
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+              ],),
+           ),
         ],
       ),
     );
