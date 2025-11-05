@@ -1,4 +1,5 @@
 import 'package:animation_flutter/Screens/dashboard.dart';
+import 'package:animation_flutter/Screens/itemdetail.dart';
 import 'package:flutter/material.dart';
 import 'package:animation_flutter/Screens/get_started.dart';
 
@@ -22,7 +23,7 @@ class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  pageWidgets[indexChangerTo],
+      body: Itemdetail(),
       backgroundColor: Colors.red,
     );
   }

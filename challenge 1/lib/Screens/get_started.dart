@@ -1,4 +1,5 @@
 import 'package:animation_flutter/Screens/dashboard.dart';
+import 'package:animation_flutter/Screens/itemdetail.dart';
 import 'package:animation_flutter/main.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class GetStarted extends StatefulWidget {
 }
 
 int indexChangerTo = 0;
-List<Widget> pageWidgets = [GetStarted(),Dashboard()];
+List<Widget> pageWidgets = [GetStarted(),Dashboard(),Itemdetail()];
 
 class _GetStartedState extends State<GetStarted> {
   @override
@@ -70,7 +71,7 @@ class _GetStartedState extends State<GetStarted> {
                   color: Colors.orange,
                   padding: EdgeInsetsGeometry.fromLTRB(40,15,40,15),
                   child: Text(
-                    "Get Started $indexChangerTo",
+                    "Get Started",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                 ),
